@@ -1,0 +1,32 @@
+.header{
+    text-align: center;
+    background-color:darksalmon;
+}
+.container{
+    max-width: 100%;
+    position: relative;
+}
+.container img{
+    max-width: 100%;
+}
+.formContainer{
+    margin: 200px 0 0 100px ;
+    width: 200px;
+    position: absolute;
+    text-align: left;
+    color:rgb(238, 237, 228);
+}
+.formContainer input{
+    font-size: 16px;
+    width: 100%;
+    border-radius: 6px;
+    height: 2rem;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+}
+#login{
+    width: 242px;
+    border-radius: 6px;
+    background-color: #2ea44f;
+    color: white;
+}
