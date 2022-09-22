@@ -1,11 +1,14 @@
 import React from "react";
-import {BrowserRouter as Route, Router} from "react-router-dom"; 
+import {Route} from "react-router-dom"; 
 import './App.css';
 import AdminLogin from "./adminLogin";
+import Home from "./home";
 
 function App() {
   return (
-    <AdminLogin />
+    <div className="App">
+      <AdminLogin />
+    </div>
   );
 }
 

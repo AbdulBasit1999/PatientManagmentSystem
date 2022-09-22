@@ -1,23 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
 import "./adminLogin.css";
-//import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import bgPic from "../images/adminLogin.jpg";
 
-const AdminLogin = () => {
-    return (
-        <div className="header">
-            hello world
+export default class AdminLogin extends Component{
+    constructor(){
+        super();
+        this.state = {
+            username : "",
+            password : "",
+        }
+    }
+
+    getValue =(e) => {
+        const { name , value} = e.target;
+        this.setState({[name]:value});
+    }
+    
+
+    handleSubmit = (e) => {
+        const navigate = useNavigate();
+
+        if(this.state.password !== "" && this.state.username!== ""){
+            if(this.state.password === "1234" && this.state.username === "hamza"){
+                navigate("/home");
+            }
+        }
+    }
+
+    render(){
+        console.log("state: ",this.state)
+        return (
             <div className="container">
                 <div className="formContainer">
-                    <form action="#">
-                        <input type="text" placeholder="Username"/>
-                        <input type="password" placeholder="Password"/>
-                        <input type="submit" id="login" value="Login"/>
+                    <form>
+                        <input name="username" type="text" placeholder="Username" value={this.state.username} onChange={this.getValue}  />
+                        <input name="password" type="password" placeholder="Password" value={this.state.password} onChange={this.getValue} />
+                        <input type="submit" id="login" value="Login" onClick={this.handleSubmit}/>
                     </form>
                 </div>
-                <img src={bgPic} />
+                <img src={bgPic} alt ="background" />
             </div>
-        </div>
-    );
-};
-export default AdminLogin;
+        );
+    }
+}
