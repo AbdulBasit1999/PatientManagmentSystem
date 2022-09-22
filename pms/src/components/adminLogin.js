@@ -19,12 +19,15 @@ export default class AdminLogin extends Component{
     
 
     handleSubmit = (e) => {
-        const navigate = useNavigate();
-
         if(this.state.password !== "" && this.state.username!== ""){
             if(this.state.password === "1234" && this.state.username === "hamza"){
+                const navigate = useNavigate();
                 navigate("/home");
+            }else{
+                alert("incorrect data");
             }
+        }else{
+            alert("Input fields are empty");
         }
     }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {Route} from "react-router-dom"; 
+import {Router, Routes, Route} from "react-router-dom"; 
 import './App.css';
 import AdminLogin from "./adminLogin";
 import Home from "./home";
@@ -7,7 +7,10 @@ import Home from "./home";
 function App() {
   return (
     <div className="App">
-      <AdminLogin />
+        <Routes>
+          <Route  path="/" element={<AdminLogin />}></Route>
+          <Route  path="/home" element={<Home />}></Route>
+        </Routes>
     </div>
   );
 }
