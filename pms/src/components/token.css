@@ -1,0 +1,54 @@
+.container{
+    width: 100%;
+    padding: 200px 30px;
+}
+.form-container{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+.header{
+    margin: 50px 0;
+    width: 100%;
+    text-align: center;
+}
+.row{
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+}
+.col1{
+    width: 30%;
+    font-size:x-large;
+    font-weight: bolder;
+}
+.col2{
+    width: 70%;
+}
+.col2 input{
+    width: 70%;
+    border-radius: 5px;
+    font-size:x-large;
+    padding: 10px 10px;
+}
+.col2 textarea{
+    width: 70%;
+    border-radius: 5px;
+    font-size:x-large;
+    padding: 10px 10px;
+}
+.col2 label{
+    font-size:larger;
+    font-weight: bolder;
+}
+#save{
+    border: none;
+    width: 40%;
+    font-size:x-large;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+}

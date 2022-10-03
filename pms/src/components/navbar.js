@@ -1,12 +1,13 @@
-import { React} from "react";
-import { useState } from "react";
+import { React,useState} from "react";
+import { Outlet } from "react-router-dom";
 import './navbar.css';
 
 export default function Navbar(){
     const [isNavExpanded, setIsNavExpanded] = useState(false);
         return(
+            <>
             <nav className="nav-container">
-                <a href="/home" className="brand-name">PMS</a>
+                <a href="/" className="brand-name">PMS</a>
                 <button className="hamburger" onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
                     {/* icon from heroicons.com */}
                     <svg
@@ -21,11 +22,15 @@ export default function Navbar(){
                 </button>
                 <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
                     <ul>
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/home">About Us</a></li>
-                        <li><a href="/home">Patients</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/token">Token</a></li>
+                        <li><a href="/patients">Patients</a></li>
+                        <li><a href="/">Doctors</a></li>
+                        <li><a href="/">Appointments</a></li>
                     </ul>
                 </div>
             </nav>
+            <Outlet/>
+            </>
         );
 } 
