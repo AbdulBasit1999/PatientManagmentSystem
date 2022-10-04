@@ -25,8 +25,9 @@ export default function Navbar(){
                         <li><a href="/">Home</a></li>
                         <li><a href="/token">Token</a></li>
                         <li><a href="/patients">Patients</a></li>
-                        <li><a href="/">Doctors</a></li>
-                        <li><a href="/">Appointments</a></li>
+                        <li><a href="/doctors">Doctors</a></li>
+                        <li><a href="/appointments">Appointments</a></li>
+                        <li><a href="/">Billing</a></li>
                     </ul>
                 </div>
             </nav>

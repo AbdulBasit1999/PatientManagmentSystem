@@ -6,6 +6,8 @@ import Home from "./home";
 import Token from "./token";
 import Patients from "./patients";
 import Navbar from "./navbar";
+import Doctors from "./doctors";
+import Appointments from "./appointments";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route  index  element={<Home />}/>
             <Route path="token" element={<Token />}/>
             <Route path="patients" element={<Patients />}/>
+            <Route path="doctors" element={<Doctors />}/>
+            <Route path="appointments" element={<Appointments />}/>
           </Route>
         </Routes>
     </div>
